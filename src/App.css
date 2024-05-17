@@ -1,38 +1,278 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-image: url(https://wallpapers.com/images/featured-full/night-city-background-sjy3a7jbx4v05nec.jpg);
+  background-size: cover;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px;
+}
+
+.container-main {
+  display: flex;
+}
+
+.container-box {
+  flex: 1;
+  margin: 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.container-title {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-sort {
+  margin-left: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select {
+  border-radius: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 25px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.topnav-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 15px;
+  align-items: center;
+}
+
+input {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 5px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgba(29, 185, 84);
+}
+
+input.search {
+  height: 30px;
+  width: 400px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 12px;
+  font-size: 15px;
+  border: 2px solid black;
+  border-radius: 50px;
+  background-color: rgba(29, 185, 84);
+  color: #121212;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d5ef46;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* font styles*/
+
+.medium-font {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.semibold-font {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.semibold-music {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.semibold-title {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  display: inline;
+  margin-left: 50px;
+}
+
+.semibold-sort {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.bold-title {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+  display: inline;
+  color: #d5ef46;
+}
+
+.bold-logo {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #d5ef46;
+}
+
+.bold-music-title {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: inline;
+  line-height: 1.2;
+  font-size: 35px;
+  padding: 0%;
+}
+
+.medium-music-artist {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 525;
+  font-style: normal;
+  display: inline;
+  line-height: 0;
+  font-size: 20px;
+  padding: 0%;
+}
+
+.medium-music-album {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  display: inline;
+  line-height: 0;
+  font-size: 20px;
+  padding: 0%;
+}
+
+.bold-logo-title {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #d5ef46;
+  font-size: 100px;
+  padding-top: 50px;
+  line-height: 0;
+}
+
+.bold-subtitle {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #d5ef46;
+  padding-bottom: 50px;
+}
+
+.bold-select {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.div-title {
+  font-size: 11rem;
+  text-align: center;
+
+  line-height: 40vh;
+  color: #fcedd8;
+  margin-top: -50px;
+  font-family: "Niconne", cursive;
+  font-weight: 700;
+  text-shadow: 5px 5px 0px #eb452b, 10px 10px 0px #efa032, 15px 15px 0px #46b59b,
+    20px 20px 0px #017e7f, 25px 25px 0px #052939, 30px 30px 0px #c11a2b,
+    35px 35px 0px #c11a2b, 40px 40px 0px #c11a2b, 45px 45px 0px #c11a2b;
+}
+
+p {
+  text-align: center;
+  font-family: "Helvetica";
+  font-size: 0.8rem;
+}
+
+a {
+  color: #d52e3f;
+  text-decoration: none;
+  font-family: "Niconne", cursive;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-family: "Gambetta", serif;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+
+  outline: none;
+  text-align: center;
+}
+
+h1:hover {
+  font-variation-settings: "wght" 582;
+  letter-spacing: 1px;
 }
